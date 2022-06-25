@@ -41,7 +41,7 @@ def get_tree_map(city, bundesland, land):
     gdf_c['Stadt'] =[x.split(',')[0] for x in gdf_c['display_name']]
     gdf_c.to_file(f'/srv/data/tree_app/Staedte_{city}_{bundesland}_{land}.geojson')
     
-    m = gdf_c[gdf_c.Stadt == city].explore(#tiles='https://api.mapbox.com/styles/v1/mapbox/satellite-v9/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoidGlsbDkwIiwiYSI6ImNsMjI0ZW9jaDA2aWMzanFseDF5YTBscmQifQ.KvR7mdt3i5ZLGZ6bTlfjbA',
+    m = gdf_c[gdf_c.Stadt == city].explore(#tiles='https://api.mapbox.com/styles/v1/mapbox/satellite-v9/tiles/{z}/{x}/{y}?access_token=add_your_acces_token_here',
                         #attr='mapbox', 
                         legend=False, 
                         popup = True,
